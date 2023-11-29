@@ -1,14 +1,15 @@
 <?php
 
-class Car{
+class Train{
     public $brand;
     private $milage;
-    static $describe= "cars have milage and brand";
+    public $trackGauge;
 
 
-    function __construct($brand, $milage){
+    function __construct($brand, $milage, $trackGauge){
         $this->brand=$brand;
         $this->milage=$milage;
+        $this->trackGauge=$trackGauge;
     }
 
     function __destruct(){
@@ -18,7 +19,7 @@ class Car{
     public function increaseMileage($amount){
         $this->milage += $amount;
     }
-    public function makeNoise(){
-        echo  "<br><br>" . "BEEP BEEP!" . "<br><br>";
+    static function makeNoise(){
+        echo  "<br><br>" . " Choo, Choo! " . "<br><br>";
     }
 }
